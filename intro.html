@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .sw {
+        color: blue;
+      }
+
+      #smc {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function value_check() {
+        var checkboxes = document.getElementsByName('language');
+        var length = checkboxes.length;
+
+        for(var i =0; i < length; i++) {
+          var checkbox = checkboxes[i]
+          if(checkbox.checked == true)
+            alert(checkbox.value)
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" name="" value="pink" id="pink_white" onclick="
+    document.querySelector('body').style.color = 'white'
+    document.querySelector('body').style.backgroundColor = 'pink'
+    ">
+    <input type="button" name="" value="powderblue" id="powderblue_white" onclick="
+    document.querySelector('body').style.color = 'white'
+    document.querySelector('body').style.backgroundColor = 'powderblue'
+    ">
+    <input type="button" name="" value="email" id="question" onclick="alert('pretocki3@gmail.com')">
+    <input type="button" name="" value="on" onclick="
+    if(this.value === 'on') {
+      document.querySelector('body').style.backgroundColor = 'yellow'
+      document.querySelector('body').style.color = 'black'
+      this.value = 'off'
+    } else {
+      document.querySelector('body').style.backgroundColor = 'black'
+      document.querySelector('body').style.color = 'yellow'
+      this.value = 'on'
+    }
+
+    ">
+    <h1><a href="intro.html">정제훈의 프로필</a></h1>
+    <h3 style="background-color: black; color: white">2학년 8반 22번</h3>
+    <h4><span class=sw>소프트웨어 1등</span>, <span id=smc>세명컴퓨터고등학교</span></h4>
+
+    <ol>
+      <li><a href="1.html">1</a></li>
+      <li><a href="2.html">2</a></li>
+      <li><a href="3.html">3</a></li>
+    </ol>
+
+    <script>
+      var day = {
+        "monday": "happy",
+        "tuesday": "sad",
+        "wendesday": "exiting"
+      }
+
+      for(var key in day) {
+        document.write(key + " : " + day[key] + "<br>")
+      }
+
+      var month = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
+      document.write("<h3>오늘은 " + month[2] + "입니다. </h3>")
+    </script>
+
+    <input type="checkbox" name="language" value="java"/>java
+    <input type="checkbox" name="language" value="c"/>c
+    <input type="checkbox" name="language" value="python"/>python
+    <br><input type="button" name="" value="체크된 객체 가져오기" onclick="value_check()">
+  </body>
+</html>
